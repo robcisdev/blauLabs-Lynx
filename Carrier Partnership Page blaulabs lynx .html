@@ -1,0 +1,1538 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blauLabs + Carrier Partnership - Smart IoT Solutions for Manufacturing, Energy &amp; Cold Chain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        'carrier-blue': '#004990',
+                        'carrier-light': '#0066CC',
+                        secondary: '#1E40AF',
+                        accent: '#0EA5E9',
+                        'dark-blue': '#0F172A',
+                        'steel-blue': '#334155',
+                        'tech-cyan': '#06B6D4',
+                        dark: '#181818',
+                        'soft-gray': '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'display': ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        'text': ['SF Pro Text', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'fade-in': 'fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'slide-in-left': 'slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'slide-in-right': 'slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'scale-in': 'scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'slide-up': 'slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'stagger-1': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both',
+                        'stagger-2': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both',
+                        'stagger-3': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both',
+                        'stagger-4': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both',
+                        'morph': 'morph 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                        'counter': 'counter 2s cubic-bezier(0.16, 1, 0.3, 1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #004990 0%, #0066CC 30%, #5D5CDE 60%, #0EA5E9 100%);
+        }
+        
+        .carrier-gradient {
+            background: linear-gradient(135deg, #004990 0%, #0066CC 100%);
+        }
+        
+        .blau-gradient {
+            background: linear-gradient(135deg, #5D5CDE 0%, #0EA5E9 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-effect {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .section-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(93, 92, 222, 0.3);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(93, 92, 222, 0.6);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes morph {
+            from {
+                border-radius: 16px;
+                transform: scale(1);
+            }
+            to {
+                border-radius: 24px;
+                transform: scale(1.02);
+            }
+        }
+        
+        @keyframes counter {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* Apple-style easing */
+        .apple-ease {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* Parallax effect */
+        .parallax-element {
+            transition: transform 0.1s ease-out;
+        }
+        
+        /* Interactive hover effects */
+        .interactive-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .interactive-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Staggered reveal animations */
+        .stagger-container .stagger-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .stagger-container.revealed .stagger-item:nth-child(1) { transition-delay: 0.1s; }
+        .stagger-container.revealed .stagger-item:nth-child(2) { transition-delay: 0.2s; }
+        .stagger-container.revealed .stagger-item:nth-child(3) { transition-delay: 0.3s; }
+        .stagger-container.revealed .stagger-item:nth-child(4) { transition-delay: 0.4s; }
+        .stagger-container.revealed .stagger-item:nth-child(5) { transition-delay: 0.5s; }
+        .stagger-container.revealed .stagger-item:nth-child(6) { transition-delay: 0.6s; }
+        
+        .stagger-container.revealed .stagger-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Smooth number counters */
+        .counter-number {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* Enhanced glass morphism */
+        .enhanced-glass {
+            backdrop-filter: blur(40px) saturate(180%);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .enhanced-glass:hover {
+            backdrop-filter: blur(50px) saturate(200%);
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(93, 92, 222, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(93, 92, 222, 0.15);
+            border-color: rgba(93, 92, 222, 0.3);
+        }
+        
+        .sticky-nav {
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-nav.scrolled {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .dark .sticky-nav.scrolled {
+            background: rgba(24, 24, 24, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .partnership-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .dark .partnership-card {
+            background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(40,40,40,0.95));
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-dark text-gray-900 dark:text-white">
+    
+    <!-- Navigation -->
+    <nav class="sticky-nav fixed top-0 w-full z-50 py-4 px-6" id="navbar">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <img src="https://pfst.cf2.poecdn.net/base/image/c1cfc9e78126a41bde8f3902a599d33943c68449cb7a1b1a895832a1c2802881?w=415&amp;h=133" alt="blauLabs by Softtek" class="h-8">
+                <div class="text-xl font-bold">Partnership Solutions</div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#partnership" class="hover:text-primary transition-colors">Partnership</a>
+                <a href="#synergies" class="hover:text-primary transition-colors">Synergies</a>
+                <a href="#success" class="hover:text-primary transition-colors">Why Softtek</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style="animation-delay: -1s;"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+            <div class="animate-fade-in-up">
+                <!-- Partnership Logos -->
+                <div class="flex items-center justify-center space-x-8 mb-12">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/a9ba0552257cd82c96de1021417874dd4dec1927be7a0614e96a6570e0c1eab9?w=2560&amp;h=1033" alt="Carrier" class="h-16 opacity-90">
+                    <div class="text-4xl font-light opacity-60">+</div>
+                    <img src="https://pfst.cf2.poecdn.net/base/image/587bfebd5447254757e63ea109aecdecbc918784bf422c23e50c0713c2fd57fc?w=399&amp;h=203" alt="Softtek" class="h-16 opacity-90">
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+                    Accelerate<br>
+                    <span class="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                        Smart IoT Solutions
+                    </span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 opacity-90">
+                    for Manufacturing, Energy &amp; Cold Chain
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed">
+                    Unite blauLabs and Carrier Lynx™ platforms on AWS to transform global operations across manufacturing, energy management, and cold chain. Together, we deliver enhanced visibility, predictive analytics, and intelligent automation for comprehensive IoT solutions.
+                </p>
+            </div>
+            
+            <!-- Hero Partnership Value -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in" style="animation-delay: 0.5s;">
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-3xl font-bold">AWS Native</div>
+                    <div class="text-sm opacity-80">Shared Cloud Foundation</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-3xl font-bold">50K+</div>
+                    <div class="text-sm opacity-80">Connected Devices</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-3xl font-bold">Global</div>
+                    <div class="text-sm opacity-80">Cold Chain Reach</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Vision Section -->
+    <section id="partnership" class="py-32 bg-soft-gray dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-reveal text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Two Powerful <span class="text-primary">Partnership Paths</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                    Leverage our shared AWS foundation and IoT expertise to accelerate market opportunities and enhance customer value through integrated cold chain solutions.
+                </p>
+            </div>
+            
+            <!-- Partnership Models -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                
+                <!-- Go-to-Market Partnership -->
+                <div class="section-reveal partnership-card rounded-3xl p-8 shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 blau-gradient rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-handshake text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold">Go-to-Market Together</h3>
+                            <p class="text-primary font-semibold">Joint Market Expansion</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+                        Combine blauLabs' proven AWS-native IoT platform with Carrier's global cold chain expertise to capture new market opportunities and serve enterprise customers together.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">Joint Customer Presentations</span>
+                                <p class="text-sm text-gray-500">Unified solution demonstrations showcasing integrated capabilities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">Shared Success Stories</span>
+                                <p class="text-sm text-gray-500">Leverage our Regeneron cold chain expertise with your portfolio</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">AWS Marketplace Presence</span>
+                                <p class="text-sm text-gray-500">Combined offerings on shared AWS foundation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">Global Reach Expansion</span>
+                                <p class="text-sm text-gray-500">Access new markets through partnership synergies</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600">$2.5B+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Combined Addressable Market</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Integration -->
+                <div class="section-reveal partnership-card rounded-3xl p-8 shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 carrier-gradient rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-plug text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold">Direct Platform Integration</h3>
+                            <p class="text-carrier-blue font-semibold">Enhanced Product Connectivity</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+                        Enable Carrier products to communicate directly with blauLabs on AWS, creating new revenue streams and enhanced customer value through deeper integration.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">Native AWS Integration</span>
+                                <p class="text-sm text-gray-500">Seamless data flow between Carrier devices and blauLabs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">Enhanced Device Intelligence</span>
+                                <p class="text-sm text-gray-500">Add AI/ML capabilities to Carrier equipment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">Predictive Maintenance</span>
+                                <p class="text-sm text-gray-500">Advanced analytics for Carrier refrigeration systems</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <div>
+                                <span class="font-semibold">New Revenue Models</span>
+                                <p class="text-sm text-gray-500">Data-driven services and subscription offerings</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600">30%+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Potential Revenue Increase</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Synergies Section -->
+    <section id="synergies" class="py-32 bg-white dark:bg-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-reveal text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Platform <span class="text-primary">Synergies</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                    Discover how blauLabs and Carrier Lynx™ complement each other to deliver unparalleled cold chain intelligence and operational excellence.
+                </p>
+            </div>
+            
+            <!-- Platform Comparison -->
+            <div class="section-reveal mb-20">
+                <div class="bg-gradient-to-r from-blue-50 via-purple-50 to-blue-50 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-blue-900/20 rounded-3xl p-12">
+                    <div class="grid lg:grid-cols-3 gap-8 items-center">
+                        
+                        <!-- Carrier Lynx -->
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg">
+                            <div class="w-32 h-32 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 p-3">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/bd2b48d3e401b20807e0430770cdd513fbd8a4f4f102c7dbcf23a37e4ccafa18?w=626&amp;h=182" alt="Lynx" class="w-full h-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Carrier Lynx™</h3>
+                            <div class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Cold Chain Specialization</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Temperature Monitoring</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Cargo Tracking</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Fleet Management</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Integration Symbol -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-carrier-blue to-primary rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-glow">
+                                <i class="fas fa-link text-2xl text-white"></i>
+                            </div>
+                            <p class="text-lg font-semibold text-gray-600 dark:text-gray-300">Enhanced Together</p>
+                            <p class="text-sm text-gray-500">AWS-Native Integration</p>
+                        </div>
+                        
+                        <!-- blauLabs -->
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg">
+                            <div class="w-40 h-32 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 p-2">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/c1cfc9e78126a41bde8f3902a599d33943c68449cb7a1b1a895832a1c2802881?w=415&amp;h=133" alt="blauLabs" class="w-full h-full object-contain">
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">blauLabs</h3>
+                            <div class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Advanced Analytics</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Predictive Maintenance</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Multi-Protocol IoT</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Manufacturing Expertise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Combined Capabilities -->
+            <div class="section-reveal">
+                <h3 class="text-3xl font-bold text-center mb-12">Combined Platform Capabilities &amp; Key Performance Indicators</h3>
+                <div class="stagger-container grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="stagger-item interactive-card bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-thermometer-half text-white"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Enhanced Temperature Intelligence</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">AI-powered temperature prediction and optimization</p>
+                        <div class="bg-blue-100 dark:bg-blue-800/20 rounded-lg p-2">
+                            <div class="text-lg font-bold text-blue-600 counter-number">99.9%</div>
+                            <div class="text-xs text-gray-500">Temperature Compliance</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stagger-item interactive-card bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cogs text-white"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Manufacturing OEE Optimization</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Overall Equipment Effectiveness monitoring and improvement</p>
+                        <div class="bg-green-100 dark:bg-green-800/20 rounded-lg p-2">
+                            <div class="text-lg font-bold text-green-600 counter-number">+15%</div>
+                            <div class="text-xs text-gray-500">OEE Improvement</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stagger-item interactive-card bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bolt text-white"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Energy Efficiency Management</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Advanced analytics for energy optimization</p>
+                        <div class="bg-purple-100 dark:bg-purple-800/20 rounded-lg p-2">
+                            <div class="text-lg font-bold text-purple-600 counter-number">-25%</div>
+                            <div class="text-xs text-gray-500">Energy Reduction</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stagger-item interactive-card bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-wrench text-white"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Predictive Maintenance</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">AI-driven maintenance scheduling and cost reduction</p>
+                        <div class="bg-orange-100 dark:bg-orange-800/20 rounded-lg p-2">
+                            <div class="text-lg font-bold text-orange-600 counter-number">-40%</div>
+                            <div class="text-xs text-gray-500">Maintenance Costs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="success" class="py-32 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-reveal text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Why <span class="text-primary">Softtek</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Our proven expertise spans cold chain, energy management, and sustainable solutions - perfectly aligned with Carrier's innovation focus across multiple sectors.
+                </p>
+            </div>
+            
+            <!-- Regeneron Success Story -->
+            <div class="section-reveal mb-20">
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-flask text-2xl text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-3xl font-bold">Regeneron Pharmaceuticals</h3>
+                                    <p class="text-gray-500">Global Biopharmaceutical Leader</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                                blauLabs successfully implemented comprehensive cold chain monitoring for Regeneron's temperature-sensitive pharmaceutical products, ensuring regulatory compliance and product integrity across the global supply chain.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-blue-600">-80°C</div>
+                                    <div class="text-sm text-gray-500">Ultra-Low Temperature Monitoring</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-green-600">99.9%</div>
+                                    <div class="text-sm text-gray-500">Temperature Compliance</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-purple-600">24/7</div>
+                                    <div class="text-sm text-gray-500">Continuous Monitoring</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-orange-600">FDA</div>
+                                    <div class="text-sm text-gray-500">Validated Compliance</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cold Chain KPIs -->
+                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 mb-8">
+                                <h5 class="text-lg font-bold text-center mb-4 text-blue-700 dark:text-blue-400">Cold Chain Excellence KPIs</h5>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                                    <div>
+                                        <div class="text-xl font-bold text-blue-600">-85%</div>
+                                        <div class="text-xs text-gray-500">Temperature Excursions</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-bold text-green-600">+95%</div>
+                                        <div class="text-xs text-gray-500">Audit Readiness</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-bold text-purple-600">-60%</div>
+                                        <div class="text-xs text-gray-500">Product Loss</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-bold text-orange-600">+40%</div>
+                                        <div class="text-xs text-gray-500">Supply Chain Visibility</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Real-time temperature monitoring across global facilities</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Automated alerts for temperature excursions</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Regulatory compliance reporting automation</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Predictive analytics for equipment maintenance</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-500 to-purple-600 p-12 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="w-32 h-32 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                                    <i class="fas fa-microscope text-6xl text-white"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold mb-4">Pharmaceutical Excellence</h4>
+                                <p class="text-white/90">Protecting life-saving medicines through intelligent cold chain management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hotel Paradores Energy Management Success Story -->
+            <div class="section-reveal mb-20">
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="order-2 lg:order-1 bg-gradient-to-br from-green-500 to-blue-600 p-12 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="w-32 h-32 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                                    <i class="fas fa-hotel text-6xl text-white"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold mb-4">Sustainable Hospitality</h4>
+                                <p class="text-white/90">Driving energy efficiency and sustainability across Spain's most prestigious hotel chain</p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-1 lg:order-2 p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-leaf text-2xl text-green-600 dark:text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-3xl font-bold">Hotel Paradores de España</h3>
+                                    <p class="text-gray-500">Spanish Historical Hotel Chain</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                                blauLabs implemented comprehensive energy management solutions across 100+ historical hotels in Spain, integrating weather data and occupancy patterns to optimize energy consumption and achieve substantial cost savings.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-green-600">6%+</div>
+                                    <div class="text-sm text-gray-500">Energy Consumption Reduction</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-blue-600">$4M+</div>
+                                    <div class="text-sm text-gray-500">Annual Savings</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-purple-600">1 Year</div>
+                                    <div class="text-sm text-gray-500">ROI Achievement</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-orange-600">100+</div>
+                                    <div class="text-sm text-gray-500">Hotels Optimized</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional Energy KPIs -->
+                            <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-4 mb-8">
+                                <h5 class="text-lg font-bold text-center mb-4 text-green-700 dark:text-green-400">Energy Management KPIs</h5>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                                    <div>
+                                        <div class="text-xl font-bold text-green-600">-12%</div>
+                                        <div class="text-xs text-gray-500">Peak Demand Reduction</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-bold text-blue-600">85%</div>
+                                        <div class="text-xs text-gray-500">Energy Efficiency Score</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-bold text-purple-600">-18%</div>
+                                        <div class="text-xs text-gray-500">Carbon Footprint</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xl font-bold text-orange-600">99.2%</div>
+                                        <div class="text-xs text-gray-500">System Uptime</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Integrated weather station and occupancy data</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Multi-utility monitoring (Energy, Water, Gas)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Environmental correlation analytics</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Continuous improvement framework</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AT&T Data Center Monitoring Success Story -->
+            <div class="section-reveal mb-20">
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="p-12">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-server text-2xl text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-3xl font-bold">AT&amp;T</h3>
+                                    <p class="text-gray-500">Largest Telco in North America</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                                Softtek designed and implemented an intelligent data center monitoring solution for AT&amp;T, covering multiple data centers with thousands of electromechanical devices, ensuring business continuity and operational excellence across their nationwide infrastructure.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-blue-600">32K+</div>
+                                    <div class="text-sm text-gray-500">Devices Monitored</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-green-600">80%+</div>
+                                    <div class="text-sm text-gray-500">Displacement Cost Savings</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-purple-600">50%+</div>
+                                    <div class="text-sm text-gray-500">Maintenance Cost Reduction</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-orange-600">30%+</div>
+                                    <div class="text-sm text-gray-500">Productivity Increase</div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>HVAC units monitored (11.2% of total equipment)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>National-scale deployment across 46+ data centers</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Predictive maintenance for critical infrastructure</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-3"></i>
+                                    <span>Compliance with regulatory requirements</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-12 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="w-32 h-32 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                                    <i class="fas fa-broadcast-tower text-6xl text-white"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold mb-4">Telecommunications Infrastructure</h4>
+                                <p class="text-white/90">Ensuring business continuity for one of America's largest telecommunications networks</p>
+                                <div class="mt-6 bg-white/10 rounded-xl p-4">
+                                    <div class="text-3xl font-bold">160K+</div>
+                                    <div class="text-sm opacity-80">Employees Supported</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shared Expertise Section -->
+            <div class="section-reveal mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-6">Aligned Sustainability Expertise</h3>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                        Both blauLabs and Carrier share a commitment to sustainability and energy efficiency. Our combined expertise creates powerful synergies for customers seeking comprehensive environmental solutions.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 blau-gradient rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-white"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">blauLabs Energy Management</h4>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-primary mr-3"></i>
+                                <span>Multi-utility consumption monitoring</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-primary mr-3"></i>
+                                <span>Weather and occupancy correlation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-primary mr-3"></i>
+                                <span>Predictive energy optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-primary mr-3"></i>
+                                <span>Sustainability reporting &amp; compliance</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-50 to-carrier-light/10 dark:from-blue-900/20 dark:to-carrier-blue/10 rounded-2xl p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 carrier-gradient rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-leaf text-white"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold">Carrier Sustainable Solutions</h4>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-carrier-blue mr-3"></i>
+                                <span>Energy-efficient HVAC systems</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-carrier-blue mr-3"></i>
+                                <span>Natural refrigerant technologies</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-carrier-blue mr-3"></i>
+                                <span>Smart building automation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-arrow-right text-carrier-blue mr-3"></i>
+                                <span>1 gigaton carbon reduction goal</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Industry Applications -->
+            <div class="section-reveal">
+                <h3 class="text-3xl font-bold text-center mb-12">Multi-Sector Applications</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+                        <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-pills text-2xl text-red-600 dark:text-red-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Pharmaceuticals &amp; Vaccines</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3 text-sm">Critical temperature monitoring for life-saving medications.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div>• mRNA vaccines (-70°C)</div>
+                            <div>• Insulin and biologics</div>
+                            <div>• Clinical trial materials</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+                        <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-utensils text-2xl text-green-600 dark:text-green-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Food &amp; Beverages</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3 text-sm">Farm-to-table freshness with continuous monitoring.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div>• Fresh produce transport</div>
+                            <div>• Dairy product monitoring</div>
+                            <div>• Frozen food logistics</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-hotel text-2xl text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Hospitality &amp; Buildings</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3 text-sm">Energy optimization and guest comfort management.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div>• HVAC optimization</div>
+                            <div>• Occupancy-based control</div>
+                            <div>• Energy cost reduction</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center shadow-lg">
+                        <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-industry text-2xl text-purple-600 dark:text-purple-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-3">Manufacturing &amp; Logistics</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3 text-sm">Smart factories and temperature-controlled logistics.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div>• Smart manufacturing</div>
+                            <div>• Cold storage facilities</div>
+                            <div>• Supply chain visibility</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blauLabs Platform Showcase -->
+    <section class="py-32 bg-white dark:bg-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-reveal text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    blauLabs <span class="text-primary">Platform Power</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    See how our AWS-native platform delivers comprehensive IoT monitoring and analytics across manufacturing and cold chain environments.
+                </p>
+            </div>
+            
+            <!-- Platform Metrics -->
+            <div class="section-reveal mb-20">
+                <div class="bg-gradient-to-r from-primary/10 to-carrier-blue/10 rounded-3xl p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center mb-8">
+                        <div>
+                            <div class="text-4xl font-bold text-primary mb-2">50K+</div>
+                            <div class="text-gray-600 dark:text-gray-400">Connected Devices</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-carrier-blue mb-2">80+</div>
+                            <div class="text-gray-600 dark:text-gray-400">Communication Protocols</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-primary mb-2">99.9%</div>
+                            <div class="text-gray-600 dark:text-gray-400">Platform Availability</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-carrier-blue mb-2">Global</div>
+                            <div class="text-gray-600 dark:text-gray-400">AWS Deployment</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Manufacturing KPIs Section -->
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
+                        <h4 class="text-2xl font-bold text-center mb-8">Manufacturing Excellence KPIs</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-green-600 mb-1">+15%</div>
+                                <div class="text-xs text-gray-500">OEE Improvement</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600 mb-1">-30%</div>
+                                <div class="text-xs text-gray-500">Downtime Reduction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600 mb-1">+20%</div>
+                                <div class="text-xs text-gray-500">Throughput Increase</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-orange-600 mb-1">-25%</div>
+                                <div class="text-xs text-gray-500">Quality Defects</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-red-600 mb-1">-40%</div>
+                                <div class="text-xs text-gray-500">Maintenance Costs</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-indigo-600 mb-1">+12%</div>
+                                <div class="text-xs text-gray-500">Asset Utilization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Platform Screenshots -->
+            <div class="section-reveal space-y-16">
+                
+                <!-- Real-Time Energy Monitoring -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold">Real-Time Environmental Monitoring</h3>
+                        </div>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                            Comprehensive environmental monitoring with power consumption analytics, temperature tracking, and facility-wide visibility - perfect for cold chain facilities.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Plant-level power and temperature analytics</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Real-time refrigeration monitoring</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Historical trend analysis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Automated alert systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/fe08d2108974245b2a07d0a97191c729ee6ebb12d571fedba71f63991db16afc?w=880&amp;h=558" alt="blauLabs Real-Time Energy Monitoring" class="w-full rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700">
+                        <div class="absolute -bottom-4 -right-4 bg-green-500 text-white p-3 rounded-full shadow-lg">
+                            <i class="fas fa-snowflake text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Manufacturing Intelligence -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 relative">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/afad818876bcae58bfdafeff8ecd7e8635548d1efcc4aab45405c66940905559?w=2396&amp;h=1800" alt="blauLabs Manufacturing Intelligence" class="w-full rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700">
+                        <div class="absolute -top-4 -left-4 bg-primary text-white p-3 rounded-full shadow-lg">
+                            <i class="fas fa-industry text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs text-purple-600 dark:text-purple-400"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold">Manufacturing Intelligence</h3>
+                        </div>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                            Enterprise-wide visibility across production facilities with detailed performance metrics and efficiency optimization - applicable to cold storage and refrigeration manufacturing.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Global facility monitoring (applicable to cold chain)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Equipment performance tracking</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Predictive maintenance analytics</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Energy efficiency optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="py-32 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-reveal text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Shared <span class="text-primary">AWS Foundation</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Both blauLabs and Carrier Lynx™ are built on AWS, providing a solid foundation for integration, scalability, and enterprise-grade reliability.
+                </p>
+            </div>
+            
+            <!-- AWS Services Integration -->
+            <div class="section-reveal">
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-12">
+                    <div class="text-center mb-12">
+                        <img src="https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png" alt="AWS" class="h-16 mx-auto mb-6 opacity-80">
+                        <h3 class="text-3xl font-bold mb-4">Common AWS Services</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Leveraging the same cloud infrastructure for seamless integration</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-satellite-dish text-2xl text-orange-600 dark:text-orange-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">AWS IoT Core</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Device connectivity and messaging</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-brain text-2xl text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Machine Learning</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Predictive analytics and insights</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-database text-2xl text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Amazon S3</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Scalable data storage</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-bar text-2xl text-purple-600 dark:text-purple-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Analytics Services</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Real-time data processing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contact" class="py-32 bg-gradient-to-br from-primary to-carrier-blue text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="section-reveal">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Let's Build the Future <span class="text-yellow-300">Together</span>
+                </h2>
+                <p class="text-xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    Join forces to revolutionize cold chain operations worldwide. Together, blauLabs and Carrier can deliver unparalleled value to customers while creating new market opportunities and revenue streams.
+                </p>
+                
+                <!-- Partnership Benefits -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="glass-effect rounded-2xl p-8">
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Accelerated Growth</h3>
+                        <p class="text-white/80">Combined market reach and customer base expansion</p>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-8">
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cogs text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Technical Innovation</h3>
+                        <p class="text-white/80">Enhanced product capabilities through integration</p>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-8">
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Strategic Alliance</h3>
+                        <p class="text-white/80">Long-term partnership for mutual success</p>
+                    </div>
+                </div>
+                
+
+                
+                <!-- Company Logos -->
+                <div class="flex items-center justify-center space-x-12 opacity-80">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/a9ba0552257cd82c96de1021417874dd4dec1927be7a0614e96a6570e0c1eab9?w=2560&amp;h=1033" alt="Carrier" class="h-12">
+                    <div class="text-2xl font-light">+</div>
+                    <img src="https://pfst.cf2.poecdn.net/base/image/587bfebd5447254757e63ea109aecdecbc918784bf422c23e50c0713c2fd57fc?w=399&amp;h=203" alt="Softtek" class="h-12">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-6">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center mb-4">
+                <!-- Left: Softtek Brand -->
+                <div class="flex flex-col sm:flex-row items-center lg:items-start lg:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/587bfebd5447254757e63ea109aecdecbc918784bf422c23e50c0713c2fd57fc?w=399&amp;h=203" alt="Softtek" class="h-6">
+                    <div class="text-center sm:text-left">
+                        <div class="text-white font-semibold text-sm">The Softtek difference</div>
+                        <div class="text-gray-400 text-xs">Near Shore® and offshore global delivery footprint</div>
+                    </div>
+                </div>
+                
+                <!-- Center: blauLabs Brand -->
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <img src="https://pfst.cf2.poecdn.net/base/image/c1cfc9e78126a41bde8f3902a599d33943c68449cb7a1b1a895832a1c2802881?w=415&amp;h=133" alt="blauLabs by Softtek" class="h-6">
+                    <div class="text-center">
+                        <div class="text-white font-semibold text-sm">blauLabs by Softtek</div>
+                        <div class="text-gray-400 text-xs">Advanced IoT platform solutions</div>
+                    </div>
+                </div>
+                
+                <!-- Right: Stats -->
+                <div class="text-center lg:text-right">
+                    <div class="text-white font-semibold text-sm">Serving Global 2,000 organizations</div>
+                    <div class="text-gray-400 text-xs">15,000+ professionals</div>
+                </div>
+            </div>
+            
+            <!-- Legal Text -->
+            <div class="border-t border-gray-700 pt-4">
+                <div class="text-xs text-gray-500 space-y-2">
+                    <div class="text-center lg:text-left">
+                        <span class="font-medium">All Rights Reserved © Valores Corporativos Softtek S.A. de C.V. 2025.</span>
+                        <span class="block sm:inline sm:ml-1">
+                            Softtek, the Softtek logo, Near Shore® and other Softtek products and services mentioned herein are registered trademarks of Valores Corporativos Softtek S.A. de C.V. in USA, Mexico and several other countries.
+                        </span>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <strong class="text-white">softtek.com</strong>
+                        <span class="block sm:inline sm:ml-1">
+                            Founded in 1982 by a small group of entrepreneurs, Softtek started out in Mexico providing local IT services, and today is a global leader in next-generation digital solutions. blauLabs is a Softtek brand specializing in IoT solutions.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for reveal animations
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.section-reveal').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Apple-style enhanced animations
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Enhanced staggered animations
+            const staggerElements = document.querySelectorAll('.stagger-container');
+            const staggerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            staggerElements.forEach(el => staggerObserver.observe(el));
+            
+            // Parallax scrolling effects
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax-element');
+                
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+            });
+            
+            // Enhanced hover effects for cards
+            const cards = document.querySelectorAll('.interactive-card, .partnership-card, .feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '';
+                });
+            });
+            
+            // Animated counters for numbers
+            const animateCounters = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const targetValue = counter.textContent;
+                        
+                        // Extract number and suffix
+                        const match = targetValue.match(/([+-]?\d+(?:\.\d+)?)(.*)/);
+                        if (match) {
+                            const endValue = parseFloat(match[1]);
+                            const suffix = match[2];
+                            const isNegative = endValue < 0;
+                            const absEndValue = Math.abs(endValue);
+                            
+                            let current = 0;
+                            const increment = absEndValue / 60; // 60 frames for 1 second at 60fps
+                            
+                            const updateCounter = () => {
+                                current += increment;
+                                if (current < absEndValue) {
+                                    const displayValue = isNegative ? -current : current;
+                                    counter.textContent = Math.floor(displayValue) + suffix;
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    counter.textContent = targetValue;
+                                }
+                            };
+                            
+                            counter.textContent = (isNegative ? '-' : '') + '0' + suffix;
+                            requestAnimationFrame(updateCounter);
+                        }
+                        
+                        observer.unobserve(counter);
+                    }
+                });
+            };
+            
+            const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.7 });
+            document.querySelectorAll('.counter-number').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+            
+            // Enhanced button interactions
+            const buttons = document.querySelectorAll('button, a[class*="bg-primary"], a[class*="border-primary"]');
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', function() {
+                    this.style.transform = 'scale(0.98)';
+                });
+                
+                button.addEventListener('mouseup', function() {
+                    this.style.transform = 'scale(1)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Glass morphism effects on hero cards
+            const heroCards = document.querySelectorAll('.glass-effect');
+            heroCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.backdropFilter = 'blur(30px) saturate(180%)';
+                    this.style.background = 'rgba(255, 255, 255, 0.15)';
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.backdropFilter = 'blur(20px)';
+                    this.style.background = 'rgba(255, 255, 255, 0.1)';
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Magnetic effect for navigation items
+            const navItems = document.querySelectorAll('nav a');
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Progressive image loading with fade-in
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (img.complete) {
+                    img.style.opacity = '1';
+                } else {
+                    img.style.opacity = '0';
+                    img.addEventListener('load', function() {
+                        this.style.transition = 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                        this.style.opacity = '1';
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
